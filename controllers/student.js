@@ -59,10 +59,6 @@ const login = async (req, res) => {
 }
 
 const auth = async (req, res, next) => {
-    // for now
-    req.studentId = '6344788f1a16d37cd9867312'
-    return next()
-
     // check header
     const authHeader = req.headers.authorization
     if (!authHeader || !authHeader.startsWith('Bearer')) {
